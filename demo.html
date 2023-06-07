@@ -1,0 +1,433 @@
+<html>
+  <head>
+    <title>
+      Welcome
+    </title>
+    </head>
+   <script type="text/javascript">
+  var a=2;          //WHILE
+while(a==1)
+{
+  document.write("True");
+  a++;
+} 
+
+  var a=0;          //DOWHILE
+do{
+  document.write(a+"Gopi True  ");
+  a+=1;
+}while(a<5); 
+
+  for (var a=1; a<=1; a++)        //FORLOOP
+{
+  document.write("<br>For Loop");
+} 
+                               //NESTEDLOOP
+  for(var a=0.5; a<=10; a+=10)    // loop 1 = execute
+{
+  document.write("<br>"+a);
+  for(var b=a; b<a-1; b--)      // loop 2 = not execute    for (b=0.5 ; 0.5 < -0.5 ; b--){   condition false  }
+  {
+   
+  document.write(b+"<br>");
+} 
+} 
+
+  var arr=[1,2,3,4,5];        // Array
+document.write("<ol>");
+  for(var a=0;a<=4;a++)
+  {
+    document.write("<li>" + arr[a] + "</li><br>");
+  }document.write("<ol>");
+
+    var arr=[1,2,3,4,5];
+document.write("<ul>");
+  for(var a=0;a<=4;a++)
+  {
+    document.write("<li>" + arr[a] + "</li><br>");
+  }document.write("<ul>"); 
+
+
+      var a=["Gopi","Sankar","G  ",22];               //MODIFY AND DELETE
+    document.write(a+"<br>");
+    a[0]="GOPI";
+    a[1]="SANKAR";
+    document.write(a+"<br>");
+    delete a[3];
+    document.write(a+"<br>"); 
+
+      var a=["Gopi","Sankar","Bengaluru", 22];          //SORT AND REVERSE
+    document.write(a+"<br>");
+    a.sort();
+    document.write(a+"<br>");
+    a.reverse();
+    document.write(a+"<br>"); 
+
+      var a=["Gopi","Bengaluru", 22];          //POP AND PUSH
+    document.write(a+"<br>");
+    a.pop();
+    document.write(a+"<br>");
+    a.push("India");
+    document.write(a+"<br>");
+    console.log(a); 
+
+      var a=["Gopi","Bengaluru", 22];          //SHIFT - removw 1st element of the array 
+    document.write(a.shift()+"<br>");   
+    document.write(a+"<br>");               //UNSHIFT  - adds new elements to the beginning of an array.
+    a.shift();
+    document.write(a+"<br>");
+    console.log(a.shift());
+    a.unshift("India");
+    document.write(a+"<br>"); 
+
+      var a=["Gopisankar","Lalitha"];             //CONCAT AND JOIN
+    var b="Gunasekaran";
+    var c =22
+    var d=a.concat(b,c);
+    console.log(d);
+    var e = d.join(" and ");
+    console.log(e); 
+
+      var a=["Gopi","sankar","Lalitha","Guna","Sekaran"];             //SLICE AND SPLICE
+    console.log(a);
+    var b = a.slice(2,5);
+    console.log(b);
+
+    var c=a.splice(4,0,"GGS","GL");
+    console.log(a); 
+
+      var a=[2, 3, 4, "Gopi", 5];           //IsArray
+    var b=Array.isArray(a);
+    console.log("boolean stmt");
+    console.log(b);
+    var c="Gopi";
+    var d=3;
+    console.log("If Conditon");
+    if(Array.isArray(c, a))
+    {
+      console.log("True");
+    }
+    else{
+      console.log("False");
+    } 
+
+      var a=["Gopi","sankar","Lalitha","Guna","Sekaran", "sankar","God"];             //INDEXOF AND LASTINDEXOF
+    console.log(a);
+    var b = a.indexOf("sankar");           //find the indexof as given value is 2 start finding from 2
+    console.log(b);
+    var c= a.lastIndexOf("sankar");
+    console.log(c); 
+
+      document.write("<ul>")              //FOREACH -- this method call a function for each element in an array
+    var a=["Gopi","sankar","Lalitha","Guna","Sekaran","God"];
+    a.forEach(loop);
+    function loop(ArrayElements, index)
+    {
+      document.write("<li>ArrayElements " + "is " + ArrayElements +" "+ index + " is an Index</li>");
+      console.log("ArrayElements " + "is " + ArrayElements +" "+ index + " is an Index");
+    }
+    document.write("</ul>"); 
+
+      var a=["gopi","sankar",22];                       //TOSTRING()
+    console.log(a);
+    var b=Array.isArray(a);
+    console.log(b);
+    var c=a.toString();
+    console.log(c);
+    console.log(Array.isArray(c));
+
+    var d=a.valueOf();                                     //VALUEOF()
+    console.log(d);
+    var e = a.fill("g",1);                            //FILL()
+    console.log(e); 
+
+      var a=[1, 2, 3,"Gopi", "3", 'GGS'];            //INCLUDES
+    console.log(a);
+    var b = a.includes('2');
+    console.log(b);
+    var c = a.includes("Gopi", 3)
+    console.log(c) 
+            
+      var a=[139, 147, 147, 147, 147]           //SOME() and EVERY()     // DOUBT
+    console.log(a)
+    var b=a.some(checkvalue)
+    console.log(b)
+    var c=a.every(checkvalue)
+    console.log(c)
+    function checkvalue(height) {
+      return height >= 147
+    } 
+
+      var a=[17, 18, 20, 17, 20]           //FIND() and FINDINDEX()     
+    console.log(a)
+    var b=a.find(checkvalue)
+    console.log(b)
+    var c=a.findIndex(checkvalue)
+    console.log(c)
+    function checkvalue(height) {
+      return height >= 16
+    } 
+    
+      var a=[1, 40, -5, 8, 20, 0, 10]           //FILTER()
+    console.log(a)
+    var b=a.filter(checkvalue)
+    console.log(b)
+    function checkvalue(height) {
+      return height <= 1
+    } 
+
+      var a = {                   //OBJECT
+      name: "Gopi",
+      sname: "Guna",
+      age: 22,
+      place: ["Salem", "Namakkal", "Attur "],
+      profit: function()
+      {
+        return this.name+ " "+ this.age;
+      }
+    };
+    document.write(a.profit());
+    //console.log(a);
+
+    var objdemo = new Object();
+    objdemo.name = "Gopii";
+    objdemo.lname = "sankar";
+    objdemo.age = 23;
+    objdemo.place = ["Attur", "Salem", "Karur"]
+    //objdemo.spot = function(){
+      //return PN;
+    //}
+    //document.write(objdemo.age);
+    console.log(objdemo); 
+
+
+      var arrobj = [{                                   //ARRAY[] OBJECT{}
+      name:"Gopi",
+      dob:"01/01/0001",
+    },
+    {
+      name:"Sankar",
+      dob:"01/01/0002",
+    },
+    {
+      name:"GGS",
+      dob:"01/01/0003",
+    },
+  ];
+  console.log(arrobj);
+  //document.write(arrobj);
+  for(var ao = 0 ; ao < arrobj.length ; ao++)
+  {
+    document.write(arrobj[ao].name + " " + arrobj[ao].dob + " <br>");
+    //document.write(arrobj[ao]);  // shown as object datatype
+    console.log(arrobj[ao]);
+  } 
+
+
+    var a={                                      //FOR IN LOOP
+    name:"Gopi",
+    age:23,
+    place:"salem",
+    id:455,
+    arr:["hi", "hello", "hai"],
+  }
+  document.write(a.arr+"<br>");
+  console.log(a);
+  for (var b in a)
+  {
+    document.write(b+ " : " + a[b]+"<br>")
+    console.log(b + ":" + a[b])
+  } 
+
+    document.write("<b>String Methods</b><br>");
+  var a="I'm Gopi sankar from Salem from TN ";
+  //alert(a);
+  var b=a.length;
+  document.write(b+" -- length"+"<br>");
+  console.log(b);
+  var c=a.toLowerCase();
+  document.write(c+" -- Lowercase"+"<br>");
+  console.log(c);
+  var d=a.toUpperCase();
+  document.write(d+" -- uppercase"+"<br>");
+  console.log(d);
+  var e=a.includes("Salem");
+  //var e=a.includes("From");
+  document.write(e+" -- includes"+"<br>");
+  console.log(e);
+  var f=a.startsWith("I'");
+  document.write(f+" -- startsWith"+"<br>");
+  console.log(f);
+  var g=a.endsWith("em");
+  document.write(g+" -- endsWith"+"<br>");
+  console.log(g);
+  var h=a.search("a");
+  document.write(h+" -- search"+"<br>");
+  console.log(h);
+  var i=a.match(/m/g);
+  document.write(i+" -- match the letter as globally"+"<br>");
+  console.log(i);
+  var j=a.indexOf("a");
+  document.write(j+" -- indexOf"+"<br>");
+  console.log(j);
+  var k=a.lastIndexOf("e");
+  document.write(k+" -- lastIndexOf"+"<br>");
+  console.log(k);
+  var l=a.replace(/from/g,"place");
+  document.write(l+" -- replace as globally"+"<br>");
+  console.log(l);
+  var l=a.replace("Gopi sankar","Gopisankar");
+  document.write(l+" -- replace"+"<br>");
+  console.log(l);
+  var m=a.trim();
+  document.write(m+" -- trim"+"<br>");
+  console.log(m);
+  var n=a.charAt(6);
+  document.write(n+"  -- charAt"+"<br>");
+  console.log(n);
+  var o=a.charCodeAt(11);
+  document.write(o+"  -- charCodeAt"+"<br>");
+  console.log(o);
+  var p=String.fromCharCode(111);
+  document.write(p+"  -- fromCharCode"+"<br>");
+  console.log(p);
+  var q=a.concat(" Welcome");
+  document.write(q+"  -- Concat"+"<br>");
+  console.log(q);
+  var n=a.split("from");
+  document.write(n+"  -- split"+"<br>");
+  console.log(n);
+  var n=a.repeat(7);
+  document.write(n+"  -- repeat"+"<br>");
+  console.log(n);
+  var n=a.slice(9,15);
+  document.write(n+"  -- slice"+"<br>");
+  console.log(n);
+  var n=a.substr(4, 12);
+  document.write(n+"  -- substr"+"<br>");
+  console.log(n);
+  var n=a.substring(4, 12);
+  document.write(n+"  -- substring"+"<br>");
+  console.log(n);
+  var c=0.1;
+  console.log(typeof c);
+  var n=c.toString();
+  document.write(typeof n + n +" "+ "  -- tostring"+"<br>");
+  console.log(typeof n); 
+
+  document.write("<b>Number Methods</b><br>");
+  var a="07.4090";
+  var aa=85.2542
+  document.write(a+" "+typeof a+"<br>");
+  var b=Number(a)
+  document.write(b+" "+typeof b+" -- String to Number <br>")
+  console.log(typeof b)
+  var b=parseInt(a);
+  document.write(b+" -- ParseInt<br>")
+  console.log(b)
+  var b=parseFloat(a)
+  document.write(b+" -- Parsefloat<br>")
+  console.log(b)
+  var b=isFinite(a);
+  document.write(b+" -- isfinite<br>")
+  console.log(b)
+  var b=Number.isInteger(aa)
+  document.write(b+" -- Interger<br>")
+  console.log(b)
+  var b=aa.toFixed(2)
+  document.write(b+" -- toFixed<br>")
+  console.log(b)
+  var b=aa.toPrecision(3)
+  document.write(b+" -- toPrecision<br><br>")
+  console.log(b)
+  
+  document.write("<br> <b>Math Methods</b><br>")
+  var a=Math.ceil(8.44)
+  document.write(a+" -- ceil<br>")
+  console.log(a)
+  var a=Math.floor(8.2)
+  document.write(a+" -- floor<br>")
+  console.log(a)
+  var a=Math.round(8.2)
+  document.write(a+" -- round<br>")
+  console.log(a)
+  var a=Math.trunc(8.2)
+  document.write(a+" -- trunc<br>")
+  console.log(a)
+  var a=Math.min(10, 20, 50)
+  document.write(a+" -- min<br>")
+  console.log(a)
+  var a=Math.max(80 ,90 ,100)
+  document.write(a+" -- max<br>")
+  console.log(a)
+  var a=Math.sqrt(100)
+  document.write(a+" -- Square root<br>")
+  console.log(a)
+  var a=Math.cbrt(27)
+  document.write(a+" -- Cube root<br>")
+  console.log(a)
+  var a=Math.pow(10, 2)
+  document.write(a+" -- Power<br>")
+  console.log(a)
+  var a=Math.random()
+  document.write(a+" -- random<br>")
+  console.log(a)
+  var a=Math.abs(51)
+  document.write(a+" -- absolute<br>")
+  console.log(a)
+  var a=Math.PI
+  document.write(a+" -- PI <br>")
+  console.log(a)
+
+  document.write("<br> <b>Date Methods</b><br>")
+  var date = new Date();
+  document.write(date+" -- current date<br>");
+  console.log(date)
+  //var date = new Date();
+  document.write(date.getDate()+" -- getdate()<br>");
+  console.log(date)
+  //var date = new Date();
+  document.write(date.getFullYear()+" -- getFullYear()<br>");
+  console.log(date)
+  //var date = new Date();
+  document.write(date.getHours()+" -- getHours()<br>");
+  console.log(date)
+  //var date = new Date();
+  document.write(date.getMonth()+" -- getMonth()<br>");
+  console.log(date)
+  //var date = new Date();
+  document.write(date.getSeconds()+" -- getSeconds()<br>");
+  console.log(date)
+
+  
+  var date = new Date();
+  document.write(date+" -- Live date<br>")
+  date.setDate(13)
+  date.setFullYear(2001)
+  date.setMonth(08)
+  date.setHours(03)
+  date.setMinutes(30)
+  date.setSeconds(32)
+  date.setMilliseconds(01)
+  document.write(date+" -- Modify date<br>");
+  document.write(date.toDateString()+" -- todatestring()")
+  console.log(date)
+
+  
+
+    </script>
+      <body>
+      
+        <p><h1>Hi Gopi! Good Morning</h1></p>
+  <p><h4>Enter your required details given below to complete the statement:</h4></p>
+  
+  <input type = "text" name="Fullname" placeholder="Enter your Fullname" id="fn"/>
+  <input type = "text" name="Place" placeholder="Enter the Current Place" id = "cp"/>
+  <button id = "b" label = "Hello Gopi" onClick="Pulled();"> SUBMIT </button>
+  
+<br><br>
+<div id="hello">
+  <b> </b>
+        </div>
+
+</body></html>

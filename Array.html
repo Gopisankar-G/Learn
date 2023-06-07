@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>
+		Array
+	</title>
+</head>
+<div id="header" >Demo DOM Methods</div>
+<script>
+	//var name;
+	//name=document.getElementById("header").getAttribute('style');
+	//console.log(name);
+
+	var element
+	element=document.getElementById("header").onclick=fun;
+	element=document.getElementById("header").addEventListener("click", function(){
+		document.getElementById("header").style.color="Blue"
+	});
+	function fun(){
+		document.getElementById("header").style.background="red";
+	}
+	/*var news;
+	var nwes;
+	document.getElementById("header").onclick=fun;
+	function fun(){
+		var abc=document.getElementById("header").classList.add("Gopi", "sankar", "Lokesh", "Veera");
+		console.log(abc);
+	
+	};*/
+		
+</script>
+<style>
+#OUTPUT o1{
+	padding: 32px 0 0 0;
+	text-transform: capitalize;
+	border-color: bisque;
+
+}
+.header{
+	background-color: red;
+}
+</style>
+<body style="text-align: center;">
+     
+<h1 style="color: red;">
+	Array
+</h1>
+    
+	<form class="" action=Array.html" method="post">
+		<input type="text" name="array[]" value="" placeholder="Buddy 1"/><br>
+		<input type="text" name="array[]" value="" placeholder="Buddy 2"/><br>
+		<input type="text" name="array[]" value="" placeholder="Buddy 3"/><br>
+		<input type="text" name="array[]" value="" placeholder="Buddy 4"/><br>
+		<input type="text" name="array[]" value="" placeholder="Buddy 5"/><br><br>
+		<button type="button" name="button" onclick="buddy()">
+			Submit
+		</button>
+	</form>
+	<br>
+
+	<div id="OUTPUT" style="color: blue;">Hi</p></div>
+
+</body>
+
+</html>

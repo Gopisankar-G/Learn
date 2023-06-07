@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM getElementById()</title>
+</head>
+
+<body>
+	<label>Enter Value 1: </label>
+	<input type="text" id="val1" />
+	<br />
+	<br />
+	<label>Enter Value 2: </label>
+	<input type=".text" id="val2" />
+	<br />
+    <br>
+	<button onclick="arithmetic()">Click to Calculate</button>
+	<div><p id="result"></p></div>
+    <div><p id="result1"></p></div>
+
+	<script type="text/javascript">
+	function arithmetic() {
+		
+		const num1 = Number(document.getElementById("val1").value);
+		const num2 = Number(document.getElementById("val2").value);
+		const add = num1 + num2;
+        const sub = num1 - num2;
+        const mul = num1 * num2;
+        const div = num1 / num2;
+		console.log(add);
+        console.log(sub);
+        console.log(mul);
+        console.log(div);
+
+        const E = num1 == num2;
+        const NE = num1 != num2;
+        const GT = num1 > num2;
+        const LT = num1 < num2;
+        const GTE = num1 >= num2;
+        const LTE = num1 <= num2;
+		console.log(E);
+        console.log(NE);
+        console.log(GT);
+        console.log(LT);
+        console.log(GTE);
+        console.log(LTE);
+		
+		document.getElementById("result").innerHTML = "Addition : " + add + "<br>Subtraction : "
+         + sub + "<br>Muliplication : " + mul + "<br>Division : " + div;
+		document.getElementById("result").style.color = "red";
+
+
+        document.getElementById("result1").innerHTML = "EqualTo : " + E + "<br>NotEqualTo : "
+         + NE + "<br>GreaterThan : " + GT + "<br>LessThan : " + LT + "<br>GreaterThanEqualTo : " + GTE + "<br>LessThanEqualTo : " + LTE;
+		document.getElementById("result1").style.background = "blue";
+	}
+    
+	</script>
+</body>
+
+</html>
