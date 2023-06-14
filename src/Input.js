@@ -7,7 +7,7 @@ const Input = ({colorValue, setColorValue, setHexValue, isDarkText, setIsDarkTex
     
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-        <label> Add Color Name:</label>
+        <label> Color Name:</label>
         <input 
             autoFocus
             type="text"
@@ -23,7 +23,7 @@ const Input = ({colorValue, setColorValue, setHexValue, isDarkText, setIsDarkTex
           type="button"
           onClick={() => setIsDarkText(!isDarkText)}
         >
-          Toggle Text Color
+          Change Text Color
         </button>
 
         
